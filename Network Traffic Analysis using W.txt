@@ -1,0 +1,84 @@
+📡 Network Traffic Analysis using Wireshark
+1. Introduction
+
+Network traffic analysis is a fundamental skill in cybersecurity, incident response, and network engineering. This project focuses on capturing and analyzing real network traffic using Wireshark to understand how different protocols operate at the packet level.
+
+The project simulates real-world analysis performed by Security Operations Center (SOC) analysts by examining packet capture (PCAP) files and interpreting protocol behavior.
+
+2. Environment Setup
+
+Operating System: Windows
+
+Network: Private Home Wi-Fi
+
+Tool: Wireshark (run with Administrator privileges)
+
+Traffic Generation Tools: Command Prompt and Web Browser
+
+No virtual machine was required, as the analysis focused on host-generated traffic in a controlled environment.
+
+3. Methodology
+3.1 Packet Capture
+
+Wireshark was configured to capture packets from the active Wi-Fi interface. Traffic was generated manually using standard networking commands and browser activity.
+
+3.2 Traffic Generation
+
+ICMP traffic generated using ping
+
+DNS traffic generated using nslookup
+
+TCP handshakes generated via fresh web connections
+
+HTTP-related traffic generated using port 80 requests
+
+4. Protocol Analysis
+4.1 ICMP Analysis
+
+ICMP Echo Request and Echo Reply packets were captured to verify connectivity. These packets demonstrate how devices test reachability and latency.
+
+4.2 DNS Analysis
+
+DNS queries and responses were captured after flushing the local DNS cache. This demonstrates how domain names are resolved to IP addresses before communication begins.
+
+4.3 TCP 3-Way Handshake
+
+The TCP handshake sequence (SYN, SYN-ACK, ACK) was analyzed to understand how reliable connections are established before data transmission.
+
+4.4 HTTP / TCP Port 80 Analysis
+
+Although modern browsers enforce HTTPS, TCP packets destined for port 80 were still visible. This highlights that encryption protects payloads but not metadata.
+
+4.5 Background Traffic
+
+Additional background traffic was analyzed to understand real-world network noise, emphasizing the importance of filtering during investigations.
+
+5. Findings
+
+Every user action generates identifiable network packets
+
+DNS resolution is a prerequisite for most communications
+
+TCP handshakes reveal connection intent and behavior
+
+Encryption hides payloads but not communication patterns
+
+Real networks contain a mixture of useful and irrelevant traffic
+
+6. Skills Demonstrated
+
+Packet capture and analysis
+
+Protocol-level understanding (ICMP, DNS, TCP, HTTP)
+
+Use of Wireshark display filters
+
+Network troubleshooting
+
+Security-focused traffic interpretation
+
+Technical documentation
+
+7. Conclusion
+
+This project demonstrates foundational network analysis skills essential for roles in cybersecurity, SOC operations, and network engineering. By analyzing real packet captures, the project bridges theoretical knowledge with practical, hands-on experience.
